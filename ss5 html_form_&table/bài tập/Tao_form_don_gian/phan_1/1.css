@@ -1,0 +1,35 @@
+.all{
+    margin-left: 460px;
+    margin-top: 100px;
+}
+.st{
+    width: 250px;
+    height: 30px;
+    background-color: orangered;
+    margin-left: 30px;
+    
+}
+h1{
+   
+    margin-left: 10px;
+    color: aliceblue;
+}
+#name{
+    height: 20px;
+margin-top: 10px;
+border-radius: 7px;
+}
+#email {
+    height: 20px;
+margin-top: 10px;
+margin-left: 30px;
+border-radius: 7px;
+}
+#submit{
+    margin-top: 10px;
+    border-radius: 5px;
+}
+#reset{
+    margin-top: 10px;
+    border-radius: 5px;
+}
