@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinh dien tich hinh tron</title>
+</head>
+<body>
+    <input placeholder="nhap ban kinh hinh tron" id="r">
+    <button onclick="tinhDienTich()">ket qua</button>
+    <script>
+        function tinhDienTich(){
+            let banKinh = +document.getElementById("r").value;
+            let ketQua = (banKinh*banKinh*3.14);
+            alert("ket qua la   "+ ketQua);
+        }
+    </script>
+</body>
+</html>

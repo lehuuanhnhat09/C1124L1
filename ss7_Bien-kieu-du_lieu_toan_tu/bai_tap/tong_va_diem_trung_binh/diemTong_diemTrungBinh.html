@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng và điểm trung bình của sinh viên</title>
+</head>
+<body>
+    <input placeholder="nhap diem toan" id="toan">
+    <input placeholder="nhap diem ly" id="ly">
+    <input placeholder="nhap diem hoa" id="hoa">
+    <button onclick="tinhDiemTrungBinh()">Tinh</button>
+    <button onclick="tinhDiemTong()">ket qua</button>
+    <script>
+        function tinhDiemTrungBinh(){
+            let toan = +document.getElementById("toan").value;
+            let ly = +document.getElementById("ly").value;
+            let hoa = +document.getElementById("hoa").value;
+            let diemTrungBinh = (toan+ly+hoa)/3;
+            alert("diem trung binh "+ diemTrungBinh);
+        }
+        function tinhDiemTong(){
+            let toan = +document.getElementById("toan").value;
+            let ly = +document.getElementById("ly").value;
+            let hoa = +document.getElementById("hoa").value;
+            let diemTong = (toan+ly+hoa); 
+            console.log(diemTong);
+        }
+        
+        
+    </script>
+</body>
+</html>
