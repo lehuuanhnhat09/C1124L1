@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <th>
+                    <label for="soTien">Số tiền</label>
+                </th>
+                <th>đổi từ</th>
+                <th>Sang</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text"  id="soTien"></td>
+                <td>
+                    <select id="from">
+                        <option value="vnd">VND</option>
+                        <option value="usd">DOLAR</option>
+                    </select>
+                </td>
+                <td>
+                    <select  id="to">
+                        <option value="vnd">VND</option>
+                        <option value="usd">DOLAR</option>
+                    </select>
+                </td>
+                <td><button onclick="doiTien()">Đổi tiền</button></td>
+
+            </tr>
+        </tbody>
+
+    </table><br>
+   <p id="soTienDoi"></p>
+    <script>
+function doiTien(){
+    let soTien = +document.getElementById("soTien").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let soTienDoi = document.getElementById("soTienDoi").value;
+    if(from =="vnd" && to =="usd"){
+        let soTienDoi = (soTien/24);
+    //    alert("So tien doi la "+soTienDoi);
+    document.getElementById("soTienDoi").innerText = soTienDoi
+    }
+    else {
+        let soTienDoi = (soTien*24);
+        document.getElementById("soTienDoi").innerText = soTienDoi
+
+    }
+    if(from =="vnd" && to =="vnd"){
+        let soTienDoi = (soTien*1);
+    document.getElementById("soTienDoi").innerText = soTienDoi
+    }
+    else{
+        let soTienDoi = (soTien*1);
+        document.getElementById("soTienDoi").innerText = soTienDoi
+    }
+}
+
+    </script>
+    
+</body>
+</html>
