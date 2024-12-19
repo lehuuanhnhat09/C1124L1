@@ -45,7 +45,7 @@ function doiTien(){
     let soTienDoi = document.getElementById("soTienDoi").value;
     if(from =="vnd" && to =="usd"){
         let soTienDoi = (soTien/24);
-    //    alert("So tien doi la "+soTienDoi);
+    
     document.getElementById("soTienDoi").innerText = soTienDoi
     }
     else {
@@ -57,7 +57,7 @@ function doiTien(){
         let soTienDoi = (soTien*1);
     document.getElementById("soTienDoi").innerText = soTienDoi
     }
-    else{
+   if(from =="usd" && to =="usd"){
         let soTienDoi = (soTien*1);
         document.getElementById("soTienDoi").innerText = soTienDoi
     }
