@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let diemThuongXuyen = +prompt("diem kiem tra thuong xuyen : ",'');
+        let diemGiuaKi = +prompt("diem kiem tra giua ki: ",'');
+        let diemCuoiKi = +prompt("diem kiem tra cuoi ki : ",'');
+        let  hocLuc = ((diemThuongXuyen+diemGiuaKi+diemCuoiKi/3));
+        if(hocLuc >= 8){
+            alert("hoc luc gioi!!!");
+        }
+      else if(hocLuc >= 6.5){
+        alert("hoc luc kha!!!");
+      }
+      else if(hocLuc >= 5){
+            alert("hoc luc trung binh !!!");
+       }
+
+     else if(hocLuc >= 3.5){
+          alert("hoc luc yeu!!!");
+        }
+     else{
+        alert("hoc luc kem");
+    }
+    </script>
+</body>
+</html>
