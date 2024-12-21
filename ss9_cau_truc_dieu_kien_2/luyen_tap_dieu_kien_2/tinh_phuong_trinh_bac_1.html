@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("nhap vao so a: ");
+        let b = +prompt("nhap vao so b : ");
+        let phuongTrinhBac1 = 0;
+        if(a == 0 && b !== 0){
+            alert(" phuong trinh vo nghiem:");
+        }
+        if(a == 0 && b == 0){
+            alert("phuong trinh vo so nghiem");
+        }
+        if(a !== 0 && b !== 0){
+            alert("nghiem cua phuong trinh la "+ (-b/a));
+        }
+        if(a !== 0 && b == 0){
+            alert("x = 0");
+        }
+    </script>
+</body>
+</html>
