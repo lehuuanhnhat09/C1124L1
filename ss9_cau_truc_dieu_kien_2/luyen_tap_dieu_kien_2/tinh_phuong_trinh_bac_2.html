@@ -9,7 +9,18 @@
     <script>
         let a = +prompt("nhap vao so nguyen a :");
         let b= +prompt("nhap vao so nguyen b:");
-        
+        let c = +prompt("nhap vao so nguyen c:");
+        let denTa = b * b - 4 * a * c;
+        if (denTa < 0) {
+            alert("phuong trinh vo nghiem:");
+        } else if (denTa == 0) {
+            let x = -b / (2 * a);
+            alert("phuong trinh co nghiem la :"+x);
+        } else {
+             let x1 = (-b - Math.sqrt(denTa)) / (2 * a);
+             let x2 = (-b + Math.sqrt(denTa)) / (2 * a);
+             alert("phuong tring co nghiem la x1:"+x1+" x2:"+x2);
+        }
     </script>
 </body>
 </html>
