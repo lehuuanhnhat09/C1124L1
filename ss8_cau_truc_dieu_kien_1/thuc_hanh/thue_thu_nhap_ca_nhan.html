@@ -6,34 +6,40 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="number" id="thuNhap"><br>
+    <input type="number" id="nguoiPhuThuoc"><br>
+    <button onclick="thueThuNhap">tinh</button>
+
     <script>
-        let thuNhap = +prompt("nhập thu nhập của bạn :");
+        function thueThuNhap(){
+        let thuNhap = +document.getElementById("thuNhap").value;
         let thue = (thuNhap-11000000);
         if(thue <=0){
             alert("ban khong can nop thue!");
         }
-        else if(thue <= 5){
+        else if(thue <= 5000000){
             alert("thue ban phai nop la: "+thue*5/100);
         }
-        else if(thue <=10){
+        else if(thue <=10000000){
             alert("thue ban phai nop la: "+thue*10/100);
         }
-        else if(thue <= 18){
+        else if(thue <= 18000000){
             alert("thue ban phai nop la: "+thue*15/100 );
         }
-        else if(thue <=32){
+        else if(thue <=32000000){
             alert("thue ban phai nop la: "+thue*20/100);
         }
-        else if(thue <=52){
+        else if(thue <=52000000){
             alert("thue ban phai nop la: "+thue*25/100);
         }
-        else if(thue <=80){
+        else if(thue <=80000000){
             alert("thue ban phai nop la: "+thue*30/100);
         }
         else{
             alert("thue ban phai nop la: "+thue*35/100);
         }
         
+        }
         
     </script>
 </body>
