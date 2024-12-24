@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="print"></p>
+    <script>
+        function fibonacci(num) {
+  let fib = [0, 1]; // Khởi tạo mảng với hai phần tử đầu tiên
+  for (let i = 2; i < num; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2]; // Tính số Fibonacci tiếp theo
+  }
+  return fib; // Trả về mảng chứa các số Fibonacci
+}
+
+// Hiển thị 20 số đầu tiên trong dãy Fibonacci
+let fibonacciNumbers = fibonacci(20);
+console.log(fibonacciNumbers.join(', '));
+       
+    </script>
+</body>
+</html>

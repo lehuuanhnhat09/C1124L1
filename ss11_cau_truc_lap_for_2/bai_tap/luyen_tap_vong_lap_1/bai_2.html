@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let nhietDo;
+        do{
+            nhietDo = +prompt("nhap vao nhiet do:");
+            if(nhietDo>= 100){
+                alert("yeu cau giam nhiet do");
+            }else if(nhietDo <= 20){
+                alert("yeu cau tang nhiet do:");
+            }else{
+                alert("nhiet do hien tai ok:"+nhietDo);
+            }
+            
+
+        }while(nhietDo > 100 || nhietDo < 20)
+    </script>
+</body>
+</html>
