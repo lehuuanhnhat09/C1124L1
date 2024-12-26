@@ -6,10 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="bangCuuChuong"></div>
     <script>
-        for(let i=1;i<=10;i++){
-            document.write("5*"+i+"="+(5*i)+"<br>");
+            const center = "CodeGym";
+
+         var html = "<table border='1'>";
+    for (let i = 1; i <= 10; i++) {
+        html += '<tr>';
+        for (let j = 2; j <= 10; j++) {
+            html += "<td>" + i + " * " + j + " = " + (i * j) + "</td>";
         }
+        html += '</tr>';
+    }
+    html += '</table>';
+    document.getElementById("bangCuuChuong").innerHTML = html;
     </script>
 </body>
 </html>
