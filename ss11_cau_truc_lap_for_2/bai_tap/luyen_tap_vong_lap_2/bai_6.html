@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function drawHeart() {
+    let x, y, a;
+    let output = '';
+
+    for (y = 1.5; y > -1.5; y -= 0.1) {
+        for (x = -1.5; x < 1.5; x += 0.05) {
+            a = x * x + y * y - 1;
+            output += (a * a * a - x * x * y * y * y <= 0) ? '*' : ' ';
+        }
+        output += '\n';
+    }
+
+    console.log(output);
+    console.log("I Love U <3");
+}
+
+drawHeart();
+
+    </script>
+</body>
+</html>

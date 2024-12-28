@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="doanSo()"></button>
+    <script>
+        function doanSo(){
+            let number = +prompt("nhap vao so bat ki :");
+            let number_ran = Math.floor(Math.random()*number);
+            let number_check = +prompt("nhap so ban doan :");
+            let count = 0;
+            while(number_check !== number){
+                if(count == 4){
+                    alert("ban da het luot doan:");break;
+                }else if(number_check > number_ran){
+                    alert("so ban doan be hon");
+                }else if(number_check < number_ran){
+                    alert("so ban doan lon hon:");
+                }
+                number_check = +prompt("nhap so ban doan");
+            }
+            if(count == 4){
+                document.write("ban het so lan do");
+            }else{
+                document.write("chuc mung ba doan dung so :");
+            }
+
+        }
+    </script>
+</body>
+</html>

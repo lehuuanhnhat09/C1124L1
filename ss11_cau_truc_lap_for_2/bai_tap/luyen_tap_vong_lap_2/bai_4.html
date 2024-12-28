@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMPTY RECTANGLE</title>
+    <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<p id="result" align="center"></p>
+<script>
+    let rectangle = "";
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 15; j++) {
+            if (i === 1 || i === 5 || j === 15 || j === 1) {
+                rectangle += "*" ;
+            }else{
+                rectangle += "&nbsp;&nbsp;";
+            }
+        }
+        rectangle += "<br>";
+    }
+    document.getElementById("result").innerHTML = rectangle;
+</script>
+</body>
+</html>

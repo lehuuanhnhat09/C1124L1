@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RIGHT TRIANGLE</title>
+    <style>
+        .row {
+            display: flex; /* Đặt các phần tử nằm trên một hàng */
+            justify-content: center; /* Đặt tất cả các phần tử về phía trái */
+            align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+            gap: 50px; /* Khoảng cách cố định 20px giữa các phần tử */
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <p id="bot_left_triangle"></p>
+    <p id="top_left_triangle"></p>
+    <p id="bot_right_triangle"></p>
+    <p id="top_right_triangle"></p>
+</div>
+
+<script>
+    btTriangle(5);
+    tlTriangle(5);
+    brTriangle(5);
+    trTriangle(5);
+
+    function btTriangle(n) {
+        let triangle = "";
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                if (j > i) {
+                    triangle += "&nbsp;&nbsp;";
+                    break;
+                }
+                triangle += "*";
+            }
+            triangle += "<br>";
+        }
+        document.getElementById("bot_left_triangle").innerHTML = triangle;
+    }
+
+    function tlTriangle(n) {
+        let triangle = "";
+        for (let i = 1; i <= n; i++) {
+            for (let j = n; j >= 1; j--) {
+                triangle += "*";
+                if (j - i === 0) {
+                    triangle += "&nbsp;&nbsp;";
+                    break;
+                }
+            }
+            triangle += "<br>";
+        }
+        document.getElementById("top_left_triangle").innerHTML = triangle;
+    }
+
+    function brTriangle(n) {
+        let triangle = "";
+        for (let i = 1; i <= n; i++) {
+            for (let j = n; j >=1; j--) {
+                if (j <= i) {
+                    triangle += "*";
+                }else {
+                    triangle += "&nbsp;&nbsp;";
+                }
+            }
+            triangle += "<br>";
+        }
+        document.getElementById("bot_right_triangle").innerHTML = triangle;
+    }
+
+    function trTriangle(n) {
+        let triangle = "";
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                if(j-i >= 0) {
+                    triangle += "*";
+                }else{
+                    triangle += "&nbsp;&nbsp;";
+                }
+            }
+            triangle += "<br>";
+        }
+        document.getElementById("top_right_triangle").innerHTML = triangle;
+    }
+
+</script>
+</body>
+</html>
