@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRIME NUMBERS</title>
+</head>
+<body>
+  <h1 align="center">THE FIRST N PRIME NUMBERS</h1>
+  <p id="result" align="center"></p>
+<script>
+  PrimeNumbers();
+  function PrimeNumbers() {
+    let num = +prompt("Nhập vào số phần tử của dãy số nguyên tố bạn muốn hiển thị!");
+
+    if (!Number.isInteger(num) || num <= 0) {
+      alert("Hãy nhập số nguyên dương hợp lệ!");
+      return;
+    } else if (isNaN(num)) {
+      alert("Hãy nhập giá trị hợp lệ!")
+      return;
+    }
+
+    let count = 0;
+    let a = 2; // 2 là snt nhỏ nhất
+    while (count < num) {
+      if (checkPrimeNumbers(a)) {
+        count++;
+        if (count === num) {
+          document.getElementById("result").innerHTML += a + ".";
+        }else{
+          document.getElementById("result").innerHTML += a + ", ";
+        }
+      }
+      a++;
+    }
+  }
+  function checkPrimeNumbers(number) {
+    if (number <= 1) {
+      return false;
+    }
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+</script>
+</body>
+</html>
