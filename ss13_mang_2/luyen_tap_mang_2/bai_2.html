@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REVERSE ARRAY</title>
+</head>
+<body>
+<script>
+    let array = [];
+    inputArray(array);
+    document.write("Mảng trước khi đảo ngược là: ");
+    outputArray(array);
+    reverseArray(array);
+    document.write("<br>Mảng sau khi đảo ngược là: ");
+    outputArray(array);
+
+    function inputArray(arr){
+        let value;
+        for(let i=0;i<arr.length;i++){
+            value = prompt("Nhập vào phần tử thứ "+(i+1)+" của mảng:");
+            arr[i] = value;
+        }
+    }
+    function reverseArray(arr) {
+        for (let i = 0; i < arr.length / 2; i++) {
+            let temp = arr[i]; // Lưu giá trị của phần tử đầu
+            arr[i] = arr[arr.length - 1 - i]; // Hoán đổi phần tử đầu và cuối
+            arr[arr.length - 1 - i] = temp; // Gán giá trị lưu trữ vào phần tử cuối
+        }
+    }
+    function outputArray(arr){
+        for(let i=0;i<arr.length;i++){
+            document.write(arr[i]+" ");
+        }
+    }
+</script>
+</body>
+</html>

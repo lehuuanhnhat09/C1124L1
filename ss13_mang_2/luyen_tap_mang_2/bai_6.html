@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REPLACE</title>
+</head>
+<body>
+<script>
+  let maxLength = parseInt(prompt("Nhập số lượng phần tử của mảng:"));
+  let arr = [];
+  inputArray(arr, maxLength);
+  document.write("Mảng gồm: ");
+  outputArray(arr);
+  document.write("<br>Mảng sau khi thi đổi '-' thành '_' là: ");
+  replaceArray(arr);
+  outputArray(arr);
+
+  function replaceArray(arr) {
+      for (let index = 0; index < arr.length; index++) {
+          if (arr[index] === '-') {
+              // Nếu phần tử là dấu '-' thì thay bằng '_'
+              arr[index] = '_';
+          } else if (typeof arr[index] === 'string' && arr[index].includes('-')) {
+              // Nếu phần tử là chuỗi và chứa ký tự '-', thay thế tất cả '-' bằng '_'
+              arr[index] = arr[index].replace(/-/g, '_');
+          }
+      }
+  }
+  function inputArray(arr,length){
+    let value;
+    for(let i=0;i<length;i++){
+      value = prompt("Nhập vào phần tử thứ "+(i+1)+" của mảng:");
+      arr[i] = value;
+    }
+  }
+  function outputArray(arr){
+    for(let i=0;i<arr.length;i++){
+      document.write(arr[i]+" ");
+    }
+  }
+</script>
+</body>
+</html>
