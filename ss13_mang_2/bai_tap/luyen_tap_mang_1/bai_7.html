@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [2,4,6,78,4,3,6,77,];
+        let soNguyenV = +prompt("nhap vao 1 so nguyen bat ki :");
+        if(soNguyenV == a.length){
+            for(let i=0;i<a.length;i++){
+                a[i] = a[i + 1];
+            }
+            a.length = a.length-1;
+        }
+        document.write("mang sau khi xoa gia tri cua V la :")
+        for(let i =0;i<a.length;i++){
+           document.write(a[i]+" ");
+        }
+    </script>
+</body>
+</html>

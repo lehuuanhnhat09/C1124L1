@@ -1,0 +1,17 @@
+~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = [2,4,6,78,4,3,6,77,];
+        let max = Math.max(...num)
+        let sum = num.reduce((acc,val) => acc + val ,0);
+        let tb = sum/num.length;
+       alert("gia tri lon nhat la :"+max+" tong gia tri la :"+tb);
+    </script>
+</body>
+</html>

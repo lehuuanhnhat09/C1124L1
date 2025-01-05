@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="str">
+   <button onclick="dich()">dịch</button>
+   <p id="output"></p>
+   <script>
+    function dich(){
+        let tiengAnh = ["hello", "dog", "cat", "bight"];
+        let tiengViet = ["xin chao", "chó" ,"meo", "chim"];
+        var tuCanDich = document.getElementById("str").value.toLowerCase();
+        var viTri = tiengAnh.indexOf(tuCanDich);
+        if(viTri !==1){
+            document.getElementById("output").innerHTML = "từ tiếng việt là :"+tiengViet[viTri];
+        }else{
+            document.getElementById("output").innerHTML = "không tìm thấy";
+        }
+    }
+   </script>
+</body>
+</html>

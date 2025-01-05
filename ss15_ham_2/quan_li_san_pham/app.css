@@ -1,0 +1,19 @@
+#themTenMay{
+    border-radius: 10px;
+    border: solid red;
+    width: 200px;
+    height: 22px;
+}
+#add{
+    padding:6px;
+    padding-right: 15px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 5px;
+    background-color: red;
+    color: aliceblue;
+}
+.prn{
+    display: flex;
+    justify-content: space-between;
+}
