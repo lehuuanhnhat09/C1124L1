@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dienTich(bk){
+            let dT = Math.PI*(bk*bk);
+            document.write("dien tich cua hinh tron la : "+dT+"<br>");
+        }
+        function chuVi(bk){
+            let cV = 2*bk*Math.PI;
+            document.write("chu vi cua hinh tron la : "+cV);
+        }
+        let banKinh = +prompt("nhap vao ban kinh hinh tron :");
+        dienTich(banKinh);
+        chuVi(banKinh);
+    </script>
+</body>
+</html>

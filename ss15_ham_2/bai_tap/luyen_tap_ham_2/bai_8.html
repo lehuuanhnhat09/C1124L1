@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function daoNguoc(n){
+            let a = [];
+            for(let i=0; i<n;i++){
+                let phanTu = +prompt("nhap vao gia tri cua phan tu ");
+                a.push(phanTu);
+            }
+            a.reverse();
+            alert(`mang sau khi duoc dao nguoc la ${a.join(", ")}`);
+        }
+        let soPhanTu = +prompt("nhap vao so luong phan tu cua mang :");
+        daoNguoc(soPhanTu);
+    </script>
+</body>
+</html>

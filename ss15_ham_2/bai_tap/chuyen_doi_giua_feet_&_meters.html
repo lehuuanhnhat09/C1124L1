@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function doiFoot(foot){
+            let met = foot*0.3048
+            document.write(foot+" foot doi sang met la :  "+met+"<br>")
+        }
+        function doiMeters(met){
+            let foot = met/0.3048
+            document.write(met+"    met doi sang foot la:   "+foot)
+        }
+        let foot = +prompt("nhap foot: ");
+        let meters = +prompt("nhap met: ");
+        doiFoot(foot);
+        doiMeters(meters);
+    </script>
+</body>
+</html>

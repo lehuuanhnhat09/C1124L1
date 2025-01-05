@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        debugger;
+        function soNhoNhat(n1,n2,n3){
+            if(n1<n2 && n1<n3){
+                alert(`${n1} la so nho nhat`);
+            }else if(n2<n1 && n2<n3){
+                alert(`${n2} la so nho nhat`);
+            }else{
+                alert( `${n3} la so nho nhat `);
+            }
+        }
+        let soThuNhat = +prompt("nhap so thu nhat :");
+        let soThuHai = +prompt("nhap so thu hai :");
+        let soThuBa = +prompt("nhap so thu ba :");
+        soNhoNhat(soThuNhat,soThuHai,soThuBa);
+    </script>
+</body>
+</html>

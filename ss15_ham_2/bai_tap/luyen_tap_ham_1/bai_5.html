@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Constellation Finder</title>
+</head>
+<body>
+    <script>
+        // Tạo mảng chứa tên các ngôi sao
+        var stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        
+        // Tạo mảng chứa tên các chòm sao tương ứng
+        var constellations = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        
+        // Hàm tìm tên chòm sao dựa trên tên ngôi sao
+        function findConstellation(starName) {
+            for (var i = 0; i < stars.length; i++) {
+                if (stars[i].toLowerCase() === starName.toLowerCase()) {
+                    return constellations[i];
+                }
+            }
+            return "Không tìm thấy ngôi sao nào với tên này.";
+        }
+        
+        // Hộp thoại prompt để người dùng nhập vào tên ngôi sao
+        var starName = prompt("Nhập tên ngôi sao:");
+        
+        // Gọi hàm với thông tin đầu vào và hiển thị kết quả
+        var result = findConstellation(starName);
+        document.write("Chòm sao của ngôi sao " + starName + " là: " + result);
+    </script>
+</body>
+</html>
+
