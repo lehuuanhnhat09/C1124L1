@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function kiemTra(mang, kiTu){
+            let count = 0;
+            for(let i=0; i< mang.length; i++){
+                if(mang[i] == kiTu){
+                    count++;
+                }
+            }
+            if(count > 0){
+                alert(`so lan xuat hien cua chuoi la : ${count}`);
+            }else{
+                alert("-1");
+            }
+        }
+        let a = ["a", "b", "c", "d"];
+        let kiTu = "a";
+        kiemTra(a,kiTu);
+    </script>
+</body>
+</html>
