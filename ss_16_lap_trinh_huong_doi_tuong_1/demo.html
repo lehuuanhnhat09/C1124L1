@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // OOP lập trình hướng đối tượng :
+    // là kỹ thuật đưa các dối tượng ngoài thực tế vào lập trình
+    // ví dụ: quản sinh viên  => code dối tượng sinh viên
+    // trong đối tượng
+    // thuộc tính: ten , tuôi
+    // hành vi ( phương thức): học, di học,...
+    let student1 = {
+        id: 1,
+        name: "chánh",
+        study: function (subject) {
+            console.log(" học môn : " + subject)
+        }
+    }
+    // có cái khuôn mẫu để tạo đối tượng không
+    // class : là môt khuôn mẫu qua định đặc điểm và hành vi chung cho một nhóm các dối tượng
+    // cú pháp toạ class bằng funtion
+    function Student(id, name) {
+        this.id = id;
+        this.name = name;
+        this.study = function (subject) {
+            console.log(this.name + " học môn : " + subject)
+        }
+    }
+
+    // es6 => cú pháp class
+
+    class SinhVien {
+        // là một hàm đặc biệt dùng để khởi tạo đối tượng
+        constructor(id, name) {
+            this.id = id;
+            this.name = name;
+        }
+
+        study(subject) {
+            console.log(this.name + " học môn : " + subject)
+        }
+
+    }
+
+    let sinhVien1 = new SinhVien(1, "chánh");
+    let sinhVien2 = new Student(2, "chánh2");
+    let sinhVien3 = new Student(4, "chánh4");
+    let sinhVien5 = new Student(5, "chánh5");
+    sinhVien5.study("toán");
+
+    let list = [
+        sinhVien5,
+        sinhVien1,
+        sinhVien3
+    ]
+
+    class MyDate1 {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+
+        }
+        getDay (){
+            return this.day;
+        }
+        setDay(day){
+            this.day = day;
+        }
+        getMonth(){
+            return this.month
+        }
+        setMonth(month){
+            this.month = month;
+        }
+        getYear(){
+            return this. year;
+        }
+        setYear(year){
+            this.year =year
+        }
+    }
+
+
+    let MyDate = function(day, month, year) {
+
+
+
+        this.getDay = function() {
+            return this.day;
+        }
+        this.getMonth = function() {
+            return this.month;
+        }
+        this.getYear = function() {
+            return this.year;
+        }
+        this.setDay = function(day) {
+            this.day  = day;
+        }
+        this.setMonth = function(month) {
+            this.month  = month;
+        }
+        this.setYear = function(year) {
+            this.year  = year;
+        }
+
+    };
+</script>
+</body>
+</html>
+Collapse
+
+
+
+
+
+
+
+
+
+
+
+

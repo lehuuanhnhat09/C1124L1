@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                class Rectangle {
+    constructor(length, width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    // Tính diện tích
+    getArea() {
+        return this.length * this.width;
+    }
+
+    // Tính chu vi
+    getPerimeter() {
+        return 2 * (this.length + this.width);
+    }
+
+    // Hiển thị hình chữ nhật trên canvas
+    draw(canvasId) {
+        const canvas = document.getElementById(canvasId);
+        if (canvas.getContext) {
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous drawings
+            ctx.beginPath();
+            ctx.rect(10, 10, this.width, this.length);
+            ctx.stroke();
+        }
+    }
+}
+
+// Khởi tạo một đối tượng Rectangle
+const rect = new Rectangle(100, 200);
+
+// Hiển thị hình chữ nhật trên canvas
+document.addEventListener("DOMContentLoaded", () => {
+    rect.draw('myCanvas');
+    console.log('Diện tích:', rect.getArea());
+    console.log('Chu vi:', rect.getPerimeter());
+});
+
+// Thay đổi chiều dài và chiều rộng
+rect.length = 150;
+rect.width = 250;
+
+// Hiển thị lại hình chữ nhật sau khi thay đổi
+document.addEventListener("DOMContentLoaded", () => {
+    rect.draw('myCanvas');
+    console.log('Diện tích mới:', rect.getArea());
+    console.log('Chu vi mới:', rect.getPerimeter());
+});
+
+    </script>
+    
+</body>
+</html>

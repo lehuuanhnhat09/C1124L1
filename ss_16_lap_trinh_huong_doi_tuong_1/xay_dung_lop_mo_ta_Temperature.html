@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class DoiNhietDo{
+            constructor(doC){
+                if (doC < -273){
+                    alert("nhiet do ko the duoi -273 do");
+                }
+                this.doC = doC
+            }
+            doiDoCsangF(){
+                return this.doC *1.8 + 32;
+            }
+            doiDOCsangK(){
+                return this.doC *274.15;
+            }
+        }
+        let temp = new DoiNhietDo(25);
+        console.log(`do C doi sang do F la : ${temp.doiDoCsangF()}`);
+        console.log(`do C doi sang do K la : ${temp.doiDOCsangK()}`);
+        
+
+    </script>
+</body>
+</html>

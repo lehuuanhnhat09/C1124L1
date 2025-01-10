@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+    <script >
+    
+
+scr
+class HinhChuNhat{
+    constructor(chieuDai,chieuRong){
+                this.chieuDai = chieuDai;
+                this.chieuRong = chieuRong;
+            }
+         DienTich() {
+            return this.chieuDai* this.chieuRong;
+        }
+        chuVi() {
+            return (this.chieuDai+ this.chieuRong)* 2;
+        }
+        display(canvasId){
+            const canvas = document.getElementById(canvasId);
+            if(canvas.getcontex){
+                const cxt = canvas.getcontex('2d');
+                cxt.clearrect(0, 0, canvas.width, canvas.height);
+                cxr.beginpath();
+                cxt.rect(10, 10, this.width, this.chieuRong);
+                cxt.stroke();
+            }
+        }
+    }
+    const rect = new HinhChuNhat(100, 200);
+    ocument.addEventListener("DOMContentLoaded", () => {
+    rect.draw('myCanvas');
+    console.log('Diện tích:', rect.getArea());
+    console.log('Chu vi:', rect.getPerimeter());
+    });
+    rect.length = 150;
+    rect.width = 250;
+    document.addEventListener("DOMContentLoaded", () => {
+    rect.draw('myCanvas');
+    console.log('Diện tích mới:', rect.getArea());
+    console.log('Chu vi mới:', rect.getPerimeter());
+    });
+        
+    </script>
+</body>
+</html>
