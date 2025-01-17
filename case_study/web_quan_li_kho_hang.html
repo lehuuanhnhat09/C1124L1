@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="web_quan_li_kho_hang.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="tieuDe">Kho chứa hàng  </h1>
+    <div class="tong">
+        <h2></h2>
+        <div class="infor">
+            <label for="maSanPham">Mã sản phẩm</label>
+            <input type="text" class="input" id="maSanPham" required><br>
+            <label for="tenMay">Tên dòng máy</label>
+            <input type="text" class="input" id="tenMay" required><br>
+            <label for="tenHang">Tên hãng sản xuất</label>
+            <input type="text" class="input" id="tenHang" required><br>
+
+        </div>
+        <div class="infor2">
+
+            <label for="giaBan">Giá bán</label>
+            <input type="number" class="input" id="giaBan" required><br>
+            <label for="soLuong">Số lượng</label>
+            <input type="number" class="input" id="soLuong" required><br>
+            <label for="viTri">Vị trí trong kho</label>
+            <select id="viTri"><br>
+                <option value="A1.01">A1.01</option>
+                <option value="A1.02">A1.02</option>
+                <option value="A1.03">A1.03</option>
+
+            </select>
+            <button type="button" id="addProduct" onclick="addProduct()">Thêm</button>
+        </div>
+    </div>
+    <table class="bang">
+        <thead>
+            <tr class="dong">
+                <th class="cot">Mã sản phẩm</th>
+                <th>Tên dòng máy</th>
+                <th>Tên hãng sản xuất</th>
+                <th>Giá bán</th>
+                <th>Số lượng</th>
+                <th>Vị trí trong kho</th>
+            </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+    </table>
+</body>
+<script src="web_quan_li_kho_hang.js"></script>
+
+</html>

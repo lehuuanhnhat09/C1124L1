@@ -1,0 +1,78 @@
+.tong {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 350px;
+    width: 550px;
+    height: 150px;
+    justify-content: center;
+    border: 1px solid rgb(0, 149, 255);
+    border-radius: 20px;
+}
+
+.infor {
+    margin-top: 40px;
+}
+
+.infor2 {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+#maSanPham {
+    margin-left: 30px;
+}
+
+#tenMay {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#tenHang {
+    margin-top: 10px;
+}
+
+#giaBan {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+#soLuong {
+    margin-top: 10px;
+}
+
+.input {
+    border: 1px solid rgb(0, 149, 255);
+    border-radius: 8px;
+    height: 20px;
+}
+
+#addProduct {
+    margin-top: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 70px;
+    height: 30px;
+}
+
+.bang {
+    border: 1px solid pink;
+    border-radius: 8px;
+    margin-left: 340px;
+    margin-top: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: pink;
+}
+#tieuDe{
+    margin-left: 500px;
+}
+#viTri{
+    padding-top: 3px;
+    padding-bottom: 5px;
+    border: 1px solid orangered;
+    border-radius: 8px;
+    margin-top: 5px;
+}
