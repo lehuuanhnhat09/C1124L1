@@ -1,0 +1,31 @@
+.all1{
+    display: flex;
+    width: 500px;
+}
+all
+#name{
+    border:1px solid red;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#price{
+    border:1px solid red;
+    border-radius: 5px;
+    
+    margin-top: 10px;
+}
+#description{
+
+    border:1px solid red;
+    border-radius: 5px;
+    
+    margin-top: 10px;
+    padding-right:15px ;
+}
+#category{
+    border:1px solid red;
+    border-radius: 5px;
+    
+    margin-top: 10px;
+    padding-right:15px ;
+}

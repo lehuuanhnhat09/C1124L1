@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    
+    <div>
+        <label for="name">Tên sản phẩm: </label>
+        <input class="border" type="text" name="name" id="name" required>
+    </div>
+    <div>
+        <label for="price">Giá: </label>
+        <input class="border" type="number" name="price" id="price" required>
+    </div>
+    <div>
+        <label for="description">Mô tả :</label>
+        <textarea class="border" name="description" id="description" required></textarea>
+    </div>
+    <div>
+        <label for="category"> Chuyên mục:</label>
+        <select class="border" name="category" id="category" required>
+            <option>- chọn chuyên mục-</option>
+            <option>Sách tư duyduy</option>
+            <option>Tiểu thuyếtthuyết</option>
+            <option>Điện thoại di dộngdộng</option>
+        </select>
+
+    </div> 
+    <div>
+        <button class="bg-blue-500 p-2 text-white" type="button" onclick="addProduct()">Lưu</button>
+    </div>
+    <table class="border-collapse border border-slate-400 table-auto">
+        <thead>
+            <thead>
+                <tr>
+                    <th class="border border-slate-300">Tên sản phẩm</th>
+                    <th class="border border-slate-300">Giá</th>
+                    <th class="border border-slate-300">Mô tả</th>
+                    <th class="border border-slate-300">Chuyên mục</th>
+                    <th class="border border-slate-300">Hành động</th>
+                </tr>
+            </thead>
+        <tbody id="tableData"></tbody>
+    </table>
+    <script>
+        class Product {
+            constructor(name, price, image, description, category) {
+                this.name = name;
+                this.price = price;
+                this.image = image;
+                this.description = description;
+                this.category = category;
+            }
+        }
+
+        const book1 = new Product("Numagician - Đánh Thức Phù Thuỷ Trí Nhớ Trong Bạn - FuSuSu", 144000, '', 'Thượng đế ban cho mỗi người bộ não thiên tài, chỉ tiếc là ngài quên gửi... hướng dẫn sử dụng!', 'Sách tư duy');
+        const book2 = new Product("Cây Cam Ngọt Của Tôi", 81100, '', 'Vị chua chát của cái nghèo hòa trộn với vị ngọt ngào khi khám phá ra những điều khiến cuộc đời này đáng số một tác phẩm kinh điển của Brazil', 'Tiểu Thuyết');
+        const iphone16 = new Product("iphone 16", 30000000, '', 'ms ra mat cuoi nam', 'Dien thoai di dong');
+        const productList = [];
+        let productIndexItem = -1;
+        productList.push(book1, book2, iphone16);
+        function displayProduct() {
+            const tableData = document.getElementById("tableData");
+            let data = '';
+            for (let i = 0; i < productList.length; i++) {
+                data += ` <tr>
+                    <td class="border border-slate-300">${productList[i].name}</td>
+                    <td class="border border-slate-300">${productList[i].price}</td>
+                    <td class="border border-slate-300">${productList[i].description}</td>
+                    <td class="border border-slate-300">${productList[i].category}</td>
+                    <td class="border border-slate-300">
+                        <button class="bg-blue-700 text-white p-1 mr-2" onclick="editProduct(${i})">Sửa</button>
+                        <button class="bg-red-600 text-white p-1" onclick="deleteProduct(${i})">Xóa</button>
+                    </td>
+                    </tr>`;
+
+            }
+            tableData.innerHTML = data;
+        }
+        displayProduct();
+
+        function addProduct() {
+            const name = document.getElementById("name").value;
+            const price = document.getElementById("price").value;
+            const description = document.getElementById("description").value;
+            const category = document.getElementById("category").value;
+            
+            displayProduct();
+            document.getElementById("name").value = "";
+            document.getElementById("price").value = "0";
+            document.getElementById("description").value = "";
+            document.getElementById("category").value = "";
+            productIndexItem = -1;
+        }
+        function deleteProduct(item) {
+           productList.splice(item,1);
+           displayProduct();
+        }
+        function editProduct(item) {
+        productIndexItem = item;
+        document.getElementById("name").value = productList[item].name;
+        document.getElementById("price").value = productList[item].price;
+        document.getElementById("description").value = productList[item].description;
+        document.getElementById("category").value = productList[item].category;
+    }
+    </script>
+
+
+</body>
+
+</html>

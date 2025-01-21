@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="web_quan_li_kho_hang.css">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="web_quan_li_kho_hang.css">
+
 </head>
 
 <body>
-    <h1 id="tieuDe">Kho chứa hàng  </h1>
+    <h1 id="tieuDe">Kho chứa hàng </h1>
     <div class="tong">
-        <h2></h2>
         <div class="infor">
             <label for="maSanPham">Mã sản phẩm</label>
             <input type="text" class="input" id="maSanPham" required><br>
@@ -37,7 +38,7 @@
             <button type="button" id="addProduct" onclick="addProduct()">Thêm</button>
         </div>
     </div>
-    <table class="bang">
+    <table class="table table-striped w-75" style="margin-left:150px;">
         <thead>
             <tr class="dong">
                 <th class="cot">Mã sản phẩm</th>
@@ -50,7 +51,42 @@
         </thead>
         <tbody id="tableData"></tbody>
     </table>
+
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Thông báo</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div id="mess-toast" class="toast-body">
+                Đây là thông báo Toast của bạn!
+            </div>
+        </div>
+    </div>
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmModalLabel">Xác nhận xóa sản phẩm</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn có chắc chắn muốn xóa sản phẩm này không?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Có</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+    <script src="web_quan_li_kho_hang.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-<script src="web_quan_li_kho_hang.js"></script>
 
 </html>

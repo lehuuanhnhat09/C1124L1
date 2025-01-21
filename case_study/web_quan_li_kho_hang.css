@@ -1,9 +1,10 @@
 .tong {
-    display: flex;
+    display: flex !important;
     margin-top: 10px;
+    margin-bottom: 100px;
     margin-left: 350px;
     width: 550px;
-    height: 150px;
+    height: 250px;
     justify-content: center;
     border: 1px solid rgb(0, 149, 255);
     border-radius: 20px;
@@ -11,6 +12,7 @@
 
 .infor {
     margin-top: 40px;
+    margin-left: 10px;
 }
 
 .infor2 {
@@ -23,17 +25,18 @@
 }
 
 #tenMay {
-    margin-left: 25px;
+    margin-left: 30px;
     margin-top: 10px;
 }
 
 #tenHang {
     margin-top: 10px;
+margin-left: 30px;
 }
 
 #giaBan {
     margin-top: 10px;
-    margin-left: 8px;
+    
 }
 
 #soLuong {
@@ -55,24 +58,31 @@
     width: 70px;
     height: 30px;
 }
-
-.bang {
-    border: 1px solid pink;
-    border-radius: 8px;
-    margin-left: 340px;
-    margin-top: 20px;
-}
-
-tr:nth-child(even) {
-    background-color: pink;
-}
-#tieuDe{
+#tieuDe {
     margin-left: 500px;
 }
-#viTri{
+
+#viTri {
     padding-top: 3px;
     padding-bottom: 5px;
     border: 1px solid orangered;
     border-radius: 8px;
     margin-top: 5px;
+}
+/* Thay đổi màu nền của bảng */
+table.table-striped tbody tr:nth-child(even) {
+    background-color: rgb(255, 137, 218); /* Màu nền cho các dòng chẵn */
+    color: white;
+}
+
+
+/* Thay đổi màu nền khi di chuột qua một dòng */
+table.table-striped tbody tr:hover {
+    background-color: orangered; /* Màu nền khi hover qua dòng */
+}
+
+/* Thay đổi màu của các tiêu đề */
+th {
+    background-color: #007bff; /* Màu nền của các tiêu đề */
+    color: black; /* Màu chữ của tiêu đề */
 }
