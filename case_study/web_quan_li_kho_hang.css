@@ -71,7 +71,7 @@ margin-left: 30px;
 }
 /* Thay đổi màu nền của bảng */
 table.table-striped tbody tr:nth-child(even) {
-    background-color: rgb(255, 137, 218); /* Màu nền cho các dòng chẵn */
+    background-color: rgb(60, 134, 244); /* Màu nền cho các dòng chẵn */
     color: white;
 }
 
