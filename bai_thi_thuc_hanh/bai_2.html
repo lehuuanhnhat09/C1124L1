@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function lamTronDiem(n) {
+            if (n < 0 || n > 100) {
+                console.log("Điểm không hợp lệ");
+            }
+            else if (n < 50) {
+                console.log("Trượt");
+            }
+            let temp = 0;
+            for (let i = 0; i <= n; i++) {
+                temp = n + i;
+                if (temp % 5 == 0 && temp < 3) {
+                    return temp;
+                } else {
+                    return n;
+                }
+            }
+        }
+
+        let n = +prompt("nhập điểm của học viên :");
+        console.log(lamTronDiem(n));
+
+    </script>
+</body>
+
+</html>

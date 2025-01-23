@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = [];
+        let sumBoi = 0;
+        let num = +prompt("nhập vào số phân tử của mảng");
+        if (num > 20) {
+            alert("nhập số  phân tử nhỏ hơn hoặc bằng 20");
+        }
+        for (let i = 0; i < num; i++) {
+            a.push(+prompt(` nhập vào giá trị của phân tử thứ ${i + 1}`))
+        }
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] % 3 == 0 && a[i] % 5 == 0) {
+                sumBoi += a[i];
+            }
+        }
+        document.write(sumBoi);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="maKhachHang">Mã Khách hàng</label>
+    <input type="text" class="boder" id="maKhachHang" required>
+    <label for="tenKhachHang">Tên Khách hàng</label>
+    <input type="text" class="boder" id="tenKhachHang" required>
+    <label for="soDienThoai">Số điện thoại</label>
+    <input type="number" class="boder" id="soDienThoai" required>
+    <div>
+        <label for="diaChi">Địa chỉ</label>
+        <input type="text" class="boder" id="diaChi" required>
+        <label for="email">Email</label>
+        <input type="text" class="boder" id="email" required>
+        <button class="nutBam" onclick="addKhachHang()">Lưu</button>
+    </div>
+    <table class="bang">
+        <thead>
+            <tr>
+                <td>Mã Khách hàng</td>
+                <td>Tên Khách hàng</td>
+                <td>Số điện thoại</td>
+                <td>Địa chỉ</td>
+                <td>Email</td>
+            </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+    </table>
+    <script>
+        class KhachHang {
+            constructor(maKhachHang, tenKachHang, soDienThoai, diaChi, email) {
+                this.maKhachHang = maKhachHang;
+                this.tenKachHang = tenKachHang;
+                this.soDienThoai = soDienThoai;
+                this.diaChi = diaChi;
+                this.email = email;
+            }
+        }
+        const khachHang1 = new KhachHang("dn001", "Nguyễn Văn A", "999 nguyễn tất thành", "khachhang@gmail.com", 21301230012);
+        khachHangList = [];
+        khachHangList.push(khachHang1);
+        function displayKhachHang() {
+            const tableData = document.getElementById("tableData");
+            let data = '';
+            for (let i = 0; i < khachHangList.length; i++) {
+                data += `
+                <tr>
+                        <td class="tableCell">${khachHangList[i].maKhachHang}</td>
+                        <td class="tableCell">${khachHangList[i].tenKachHang}</td>
+                        <td class="tableCell">${khachHangList[i].soDienThoai}</td>
+                        <td class="tableCell">${khachHangList[i].diaChi}</td>
+                        <td class="tableCell">${khachHangList[i].email}</td>
+                </tr>`
+            }
+            tableData.innerHTML = data;
+        }
+        displayKhachHang();
+        function addKhachHang() {
+            const maKhachHang = document.getElementById("maKhachHang").value;
+            const tenKachHang = document.getElementById("tenKhachHang").value;
+            const soDienThoai = document.getElementById("soDienThoai").value;
+            const diaChi = document.getElementById("diaChi").value;
+            const email = document.getElementById("email").value;
+            const newkhachHang = new KhachHang(maKhachHang, tenKachHang, soDienThoai, diaChi, email);
+            khachHangList.push(newkhachHang);
+            displayKhachHang();
+            document.getElementById("maKhachHang").value = ' ';
+            document.getElementById("tenkhachHang").value = ' ';
+            document.getElementById("soDienThoai").value = ' ';
+            document.getElementById("diaChi").value = ' ';
+            document.getElementById("email").value = ' ';
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
